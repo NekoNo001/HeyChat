@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_1sdp">
+
+    <RelativeLayout
+        android:id="@+id/layout_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_sent_message"
+        android:textColor="@color/white"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        app:layout_constraintWidth_max="wrap"
+        app:layout_constraintHeight_max="wrap"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/downBtn"
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:text="Message"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imageMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginRight="@dimen/_3sdp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:id="@+id/downBtn"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_down"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtDelete"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:background="@drawable/background_translate"
+        android:backgroundTint="#2196F3"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@+id/layout_message"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSeenMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="qweasdasdasdsa"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/_8ssp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layout_message"
+        app:layout_constraintLeft_toRightOf="@id/layout_message"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Text Date Time"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/_8ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSeenMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

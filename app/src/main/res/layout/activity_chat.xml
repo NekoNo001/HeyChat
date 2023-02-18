@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".activities.ChatActivity"
+    android:paddingBottom="@dimen/_5sdp"
+    android:background="#56CAC5C5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content_bottom"
+        android:backgroundTint="#56CAC5C5">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_top"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_5sdp"
+            app:cardBackgroundColor="#D9D9D9"
+            app:cardCornerRadius="100dp"/>
+
+        <RelativeLayout
+            android:id="@+id/layoutTop"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_3sdp"
+            android:layout_below="@id/btn_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_back_black" />
+
+            <TextView
+                android:layout_toEndOf="@id/imageBack"
+                android:layout_centerVertical="true"
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:text="User name"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_marginRight="@dimen/_5sdp"
+                android:id="@+id/audio_call_btn_chat_act"
+                android:layout_toStartOf="@id/video_call_btn_chat_act"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_call"/>
+
+            <ImageView
+                android:id="@+id/video_call_btn_chat_act"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_video_call"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layoutSuggestions"
+            android:layout_below="@id/layoutTop"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="2dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:padding="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_25sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:stackFromEnd="true">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutSuggestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_above="@id/lauoutBottom"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/textSuggestion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/background_text_seen_message"
+                android:backgroundTint="#8FB1AEAE"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/Hello"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textSuggestion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/textSuggestion1"
+                android:background="@drawable/background_text_seen_message"
+                android:backgroundTint="#8FB1AEAE"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/Beautiful"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@+id/textSuggestion1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textSuggestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/textSuggestion2"
+                android:background="@drawable/background_text_seen_message"
+                android:backgroundTint="#8FB1AEAE"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/funny"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@+id/textSuggestion2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textSuggestion4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/textSuggestion3"
+                android:background="@drawable/background_text_seen_message"
+                android:backgroundTint="#8FB1AEAE"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/Ok"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@+id/textSuggestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textSuggestion5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/textSuggestion4"
+                android:background="@drawable/background_text_seen_message"
+                android:backgroundTint="#8FB1AEAE"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/idea"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@+id/textSuggestion4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:paddingLeft="@dimen/_10sdp"
+            android:id="@+id/lauoutBottom"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_chat_input"
+            android:layout_marginBottom="@dimen/_6sdp">
+
+            <EditText
+                android:id="@+id/inputeMessage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_toStartOf="@id/layoutAttact"
+                android:background="@drawable/background_chat_input"
+                android:hint="@string/Message"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_send"
+                android:id="@+id/layoutSend"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:tint="@color/black"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/layoutAttact"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_toStartOf="@id/layoutImage"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_attach"
+                app:tint="@color/black">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/layoutImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_send_image"
+                app:tint="@color/black">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

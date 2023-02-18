@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_5sdp"
+    android:background="#00000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_50sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_sent_message"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_15ssp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="wrap"
+        app:layout_constraintHeight_max="wrap"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Message"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textSeenMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textMessage"
+            android:layout_centerHorizontal="true"
+            android:text="asdasdasdasdas"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMessage" />
+
+        <ImageView
+            android:id="@+id/imageCheck"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_alignTop="@+id/textSeenMessage"
+            android:layout_alignBottom="@+id/textSeenMessage"
+            android:layout_toEndOf="@id/textSeenMessage"
+            android:src="@drawable/ic_check_message"
+            app:layout_constraintStart_toEndOf="@+id/textSeenMessage"
+            app:layout_constraintEnd_toEndOf="@id/textMessage"
+            app:layout_constraintTop_toBottomOf="@+id/textMessage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_3sdp"
+        android:paddingEnd="@dimen/_3sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="Text Date Time"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/layout_message"
+        app:layout_constraintTop_toBottomOf="@+id/layout_message" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/background_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/textDateTime"
+        app:layout_constraintTop_toBottomOf="@+id/textDateTime">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTranslate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/background_text_seen_message"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textTranslate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageTranslate"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/Translate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:id="@+id/imageTranslate"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:src="@drawable/ic_translate" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/background_text_seen_message"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayoutTranslate"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageCopy"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/Copy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:id="@+id/imageCopy"
+                android:layout_width="@dimen/_25ssp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_copy" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/background_text_seen_message"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayoutCopy"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textMultipleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageMultipleSelection"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/Detail"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:id="@+id/imageMultipleSelection"
+                android:layout_width="@dimen/_25ssp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#B5FA9500"
+                android:src="@drawable/ic_info"
+                app:tint="#B5FA9500" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/background_text_seen_message"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayoutDetail"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageDelete"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/Delete"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:id="@+id/imageDelete"
+                android:layout_width="@dimen/_25ssp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_delete" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_call">
+
+    <LinearLayout
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@null">
+
+
+        <TextView
+            android:id="@+id/user_name_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Username"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/callDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/remoteVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"/>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_50sdp"
+            android:id="@+id/localVideo"
+            android:layout_width="150dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="200dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_toLeftOf="@id/hangupButton"
+            android:id="@+id/imageMute"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/background_image"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_mic"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/hangupButton"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_image"
+            android:backgroundTint="#f52421"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_call_end_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_toEndOf="@id/hangupButton"
+            android:id="@+id/imageCamera"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/background_image"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_camera"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_input"
+    android:backgroundTint="@color/white"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="@string/Log_out"
+        android:gravity="center"
+        android:textSize="@dimen/_20ssp"
+        android:background="@drawable/background_content_bottom"
+        android:backgroundTint="@color/primary"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/ic_logout" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/LogoutConfirm"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/black"
+            android:padding="@dimen/_10sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/yes_btn"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button"
+            android:layout_weight="1"
+            android:text="@string/Yes"/>
+
+        <Button
+            android:id="@+id/no_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/background_button"
+            android:text="@string/Close" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
